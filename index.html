@@ -1,0 +1,56 @@
+Project: Madera Intelligence Platform v2
+
+Goal:
+Prepare the application for its first staging deployment on Google Cloud Platform using a simple, production-oriented architecture.
+
+Context:
+Nothing is set up in GCP yet.
+The desired first deployment target is a staging environment, not production.
+The platform includes:
+- admin UI/API
+- PostgreSQL-backed data model
+- report generation
+- email delivery
+- background/report execution paths
+
+Primary objective:
+Make the repo deployment-ready for a first staging environment on GCP with clear setup steps and minimal infrastructure complexity.
+
+Target staging architecture:
+- Cloud Run service for the admin UI/API
+- Cloud Run job for scheduled/background runs
+- Cloud SQL for PostgreSQL
+- Artifact Registry for container images
+- Secret Manager for secrets
+
+Requirements:
+1. Review the current deployment/runtime setup in the repo.
+2. Ensure the app can cleanly run in two modes:
+   - web/admin service mode
+   - background/job mode
+3. Add or refine deployment assets under something like:
+   - infra/gcp
+4. Add clear environment/config handling for staging, including:
+   - database connection
+   - secrets
+   - artifact/output paths
+   - runtime mode
+5. Add staging-oriented documentation covering:
+   - required GCP services
+   - required environment variables / secrets
+   - expected service accounts / IAM roles
+   - local vs staging config differences
+6. Ensure the app container is suitable for deployment to:
+   - Cloud Run service
+   - Cloud Run job
+7. Keep the deployment design simple and easy for a first-time GCP setup.
+
+Constraints:
+- Do not assume existing GCP infrastructure.
+- Do not overbuild Terraform unless the repo already has a strong infra direction.
+- Keep local development working.
+
+Acceptance criteria:
+- The repo is clearly ready for a first staging deployment on GCP.
+- The service/job split is explicit and compatible with Cloud Run.
+- The setup documentation is beginner-friendly and actionable.
