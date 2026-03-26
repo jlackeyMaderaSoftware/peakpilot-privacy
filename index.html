@@ -1,56 +1,60 @@
-Project: Madera Intelligence Platform v2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PeakPilot Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #1f2937;
+    }
+    h1, h2 {
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
 
-Goal:
-Prepare the application for its first staging deployment on Google Cloud Platform using a simple, production-oriented architecture.
+<h1>PeakPilot Privacy Policy</h1>
+<p><strong>Effective Date:</strong> March 2026</p>
 
-Context:
-Nothing is set up in GCP yet.
-The desired first deployment target is a staging environment, not production.
-The platform includes:
-- admin UI/API
-- PostgreSQL-backed data model
-- report generation
-- email delivery
-- background/report execution paths
+<h2>1. Overview</h2>
+<p>PeakPilot (“we”, “our”, or “us”) is an AI-powered endurance training application designed to help athletes plan, track, and improve their training.</p>
 
-Primary objective:
-Make the repo deployment-ready for a first staging environment on GCP with clear setup steps and minimal infrastructure complexity.
+<h2>2. Information We Collect</h2>
+<p>We may collect health and workout data (with permission), user-provided information, and app usage data.</p>
 
-Target staging architecture:
-- Cloud Run service for the admin UI/API
-- Cloud Run job for scheduled/background runs
-- Cloud SQL for PostgreSQL
-- Artifact Registry for container images
-- Secret Manager for secrets
+<h2>3. How We Use Your Data</h2>
+<p>We use your data to generate training plans, provide insights, and improve the app.</p>
 
-Requirements:
-1. Review the current deployment/runtime setup in the repo.
-2. Ensure the app can cleanly run in two modes:
-   - web/admin service mode
-   - background/job mode
-3. Add or refine deployment assets under something like:
-   - infra/gcp
-4. Add clear environment/config handling for staging, including:
-   - database connection
-   - secrets
-   - artifact/output paths
-   - runtime mode
-5. Add staging-oriented documentation covering:
-   - required GCP services
-   - required environment variables / secrets
-   - expected service accounts / IAM roles
-   - local vs staging config differences
-6. Ensure the app container is suitable for deployment to:
-   - Cloud Run service
-   - Cloud Run job
-7. Keep the deployment design simple and easy for a first-time GCP setup.
+<h2>4. AI Processing</h2>
+<p>We use AI services to generate plans and adjustments using training data.</p>
 
-Constraints:
-- Do not assume existing GCP infrastructure.
-- Do not overbuild Terraform unless the repo already has a strong infra direction.
-- Keep local development working.
+<h2>5. Data Sharing</h2>
+<p>We do not sell your data. We only share data with necessary service providers.</p>
 
-Acceptance criteria:
-- The repo is clearly ready for a first staging deployment on GCP.
-- The service/job split is explicit and compatible with Cloud Run.
-- The setup documentation is beginner-friendly and actionable.
+<h2>6. Data Storage</h2>
+<p>Your data is stored securely and may be processed via cloud services.</p>
+
+<h2>7. Your Control</h2>
+<p>You can disconnect integrations or request deletion of your data.</p>
+
+<h2>8. Third-Party Services</h2>
+<p>We integrate with Apple HealthKit, Strava, and OpenAI.</p>
+
+<h2>9. Children’s Privacy</h2>
+<p>Not intended for children under 13.</p>
+
+<h2>10. Changes</h2>
+<p>This policy may be updated.</p>
+
+<h2>11. Contact</h2>
+<p>Email: your@email.com</p>
+
+</body>
+</html>
